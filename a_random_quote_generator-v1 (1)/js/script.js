@@ -42,8 +42,12 @@ let quotes = [
 /***
  * `getRandomQuote` function
 ***/
+function getRandomQuote (arr){
+  let randomQuote = Math.floor(Math.random() * arr.length);
+  console.log(quotes[randomQuote]);
+}
 
-
+getRandomQuote(quotes);
 
 /***
  * `printQuote` function
