@@ -58,6 +58,14 @@ let quotes = [
   quote: "You can’t think and play. If you think about what you’re playing the playing becomes stilted. You have to just focus on the music you feel, concenctrate on the music, focus on what you’re playing and let the playing come out. Once you start thinking about doing this or doing that, it\’s not good. What you are doing is like a language, you’re always learning about this thing everytime you pick it up.",
   source: "Kieth Richards"
 
+},
+
+{
+  quote: "No. Anybody that plays guitar knows that only Jimi Hendrix was able to use the standard tremolo and still keep it in tune. Those things are totally worthless. I do have one on a Japanese Strat, but I don’t use it.",
+  source: "Kurt Cobain"
+  year: "1992",
+  citation: "Guitar World Magazine"
+
 }
 
 ];
