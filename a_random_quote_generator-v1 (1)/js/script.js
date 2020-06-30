@@ -34,7 +34,31 @@ let quotes = [
     quote:"When I look for what I’m going to listen to I go backwards. I’m always going the other way you see. Most people are trying to figure out how do I get in the fast lane going that way?. I\'m going in the other direction. I wanna find the oldest thing to do.",
     source: "Eric Clapton"
 
-  }
+  },
+
+  {
+      quote: "Listening is the key to everything good in music.",
+      source: "Pat Metheny"
+
+  },
+
+  {
+    quote: "For me, the ultimate form of expression is blues, where jazz appeals to me on an intellectual level.",
+    source: "Scott Henderson"
+
+},
+
+{
+  quote: "If you play music for no other reason than actually just because you love it, the skills just kinda creep up on you.",
+  source: "Nuno Bettencourt"
+
+},
+
+{
+  quote: "You can’t think and play. If you think about what you’re playing the playing becomes stilted. You have to just focus on the music you feel, concenctrate on the music, focus on what you’re playing and let the playing come out. Once you start thinking about doing this or doing that, it\’s not good. What you are doing is like a language, you’re always learning about this thing everytime you pick it up.",
+  source: "Kieth Richards"
+
+}
 
 ];
 
@@ -42,19 +66,23 @@ let quotes = [
 /***
  * `getRandomQuote` function
 ***/
-function getRandomQuote (arr){
-  let randomQuote = Math.floor(Math.random() * arr.length);
-  console.log(quotes[randomQuote]);
+function getRandomQuote (){
+  let randomQuote = Math.floor(Math.random() * quotes.length);
+  return (quotes[randomQuote]);
 }
 
-getRandomQuote(quotes);
 
 /***
  * `printQuote` function
 ***/
+function printQuote(){
+  let newQuote = getRandomQuote();
+  let html = `<p class = "quote">${newQuote.quote}</p>`;
+  html += `<p class = "source">${newQuote.source}</p>`;
+  document.getElementById("quote-box").innerHTML = html;
+}
 
-
-
+printQuote();
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
