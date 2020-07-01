@@ -84,15 +84,22 @@ function getRandomQuote (){
  * `printQuote` function
 ***/
 function printQuote(){
-  const divQuoteBox = document.querySelector("citation");
   let newQuote = getRandomQuote();
   let html = `<p class = "quote">${newQuote.quote}</p>`;
   html += `<p class = "source">${newQuote.source}</p>`;
   document.getElementById("quote-box").innerHTML = html;
 
-  if (newQuote.hasOwnProperty("citation") === true) {
+  if (newQuote.hasOwnProperty("citation")) {
+    let divQuoteBox = document.getElementById("quote-box");
     html += `<span class= "citation">${newQuote.citation}</span>`;
     return divQuoteBox.innerHTML = html;
+}
+
+if(newQuote.hasOwnProperty("year")) {
+  let divQuoteBox = document.getElementById("quote-box");
+  html += `<span class="year">${newQuote.year}</span>`;
+  return divQuoteBox.innerHTML = html;
+  
 }
 
 }
