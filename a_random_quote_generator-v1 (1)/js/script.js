@@ -90,18 +90,15 @@ function printQuote(){
   document.getElementById("quote-box").innerHTML = html;
 
   if (newQuote.hasOwnProperty("citation")) {
-    let divQuoteBox = document.getElementById("quote-box");
-    html += `<span class= "citation">${newQuote.citation}</span>`;
-    return divQuoteBox.innerHTML = html;
+    html += `<p class = "source"><span class= "citation">${newQuote.citation}</span></p>`;
 }
 
 if(newQuote.hasOwnProperty("year")) {
-  let divQuoteBox = document.getElementById("quote-box");
-  html += `<span class="year">${newQuote.year}</span>`;
-  return divQuoteBox.innerHTML = html;
+  html += `<p class = "source"><span class="year">${newQuote.year}</span></p>`;
   
 }
-
+let divQuoteBox = document.getElementById("quote-box");
+divQuoteBox.innerHTML = html;
 }
 
 printQuote();
