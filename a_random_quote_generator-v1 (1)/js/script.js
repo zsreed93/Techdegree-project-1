@@ -62,7 +62,7 @@ let quotes = [
 
 {
   quote: "No. Anybody that plays guitar knows that only Jimi Hendrix was able to use the standard tremolo and still keep it in tune. Those things are totally worthless. I do have one on a Japanese Strat, but I don’t use it.",
-  source: "Kurt Cobain"
+  source: "Kurt Cobain", 
   year: "1992",
   citation: "Guitar World Magazine"
 
@@ -88,6 +88,11 @@ function printQuote(){
   let html = `<p class = "quote">${newQuote.quote}</p>`;
   html += `<p class = "source">${newQuote.source}</p>`;
   document.getElementById("quote-box").innerHTML = html;
+
+  if (newQuote.hasOwnProperty("citation") === true) {
+    html += `<span class= "citation">${newQuote.citation}</span>`;
+}
+
 }
 
 printQuote();
