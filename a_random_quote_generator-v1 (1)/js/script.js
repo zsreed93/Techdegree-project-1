@@ -84,6 +84,7 @@ function getRandomQuote (){
  * `printQuote` function
 ***/
 function printQuote(){
+  const divQuoteBox = document.querySelector("citation");
   let newQuote = getRandomQuote();
   let html = `<p class = "quote">${newQuote.quote}</p>`;
   html += `<p class = "source">${newQuote.source}</p>`;
@@ -91,6 +92,7 @@ function printQuote(){
 
   if (newQuote.hasOwnProperty("citation") === true) {
     html += `<span class= "citation">${newQuote.citation}</span>`;
+    return divQuoteBox.innerHTML = html;
 }
 
 }
