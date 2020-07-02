@@ -73,6 +73,8 @@ let quotes = [
 
 /***
  * `getRandomQuote` function
+ * 
+ *  gets a random quote from the quotes object and returns it
 ***/
 function getRandomQuote (){
   let randomQuote = Math.floor(Math.random() * quotes.length);
@@ -82,12 +84,17 @@ function getRandomQuote (){
 
 /***
  * `printQuote` function
+ * 
+ *    creates an html string containing the random quote and appends it to the page.
 ***/
 function printQuote(){
   let newQuote = getRandomQuote();
   let html = `<p class = "quote">${newQuote.quote}</p>`;
   html += `<p class = "source">${newQuote.source}`;
+/*
 
+checks to see if there are year and citation properties in the quotes object and then appends them to the page.
+*/
   if (newQuote.hasOwnProperty("citation")) {
     html += `<span class= "citation">${newQuote.citation}</span>`;
 }
