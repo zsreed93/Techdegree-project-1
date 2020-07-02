@@ -86,17 +86,17 @@ function getRandomQuote (){
 function printQuote(){
   let newQuote = getRandomQuote();
   let html = `<p class = "quote">${newQuote.quote}</p>`;
-  html += `<p class = "source">${newQuote.source}</p>`;
-  document.getElementById("quote-box").innerHTML = html;
+  html += `<p class = "source">${newQuote.source}`;
 
   if (newQuote.hasOwnProperty("citation")) {
-    html += `<p class = "source"><span class= "citation">${newQuote.citation}</span></p>`;
+    html += `<span class= "citation">${newQuote.citation}</span>`;
 }
 
 if(newQuote.hasOwnProperty("year")) {
-  html += `<p class = "source"><span class="year">${newQuote.year}</span></p>`;
+  html += `<span class="year">${newQuote.year}</span>`;
   
 }
+html += `</p>`;
 let divQuoteBox = document.getElementById("quote-box");
 divQuoteBox.innerHTML = html;
 }
